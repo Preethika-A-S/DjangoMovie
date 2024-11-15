@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<h2 class="text-center">Edit Movie Details</h2>
+<form method="POST" enctype="multipart/form-data">
+
+{% csrf_token %}
+
+
+
+  <table>
+        {{form.as_table}}
+    </table>
+    <input type="submit">
+
+
+<!--  <div class="mb-3">-->
+<!--    <label class="form-label">Title</label>-->
+<!--      <input type="text" class="form-control" name="t" value="{{movie.title}}" placeholder="enter the title">-->
+<!--  </div>-->
+<!--  <div class="mb-3">-->
+<!--    <label class="form-label">Description</label>-->
+<!--    <input type="text" class="form-control" name="d" value="{{movie.description}}" placeholder="enter the description">-->
+<!--  </div>-->
+<!--  <div class="mb-3">-->
+<!--    <label class="form-label">Year</label>-->
+<!--    <input type="number" class="form-control" name="y" value="{{movie.year}}" placeholder="Enter the year">-->
+<!--  </div>-->
+<!--  <div class="mb-3">-->
+<!--    <label class="form-label">Language</label>-->
+<!--    <input type="text" class="form-control" name="l" value="{{movie.language}}" placeholder="Enter the language">-->
+<!--  </div>-->
+<!--  <div class="mb-3">-->
+<!--        <label class="form-label">Image</label>-->
+<!--      <img src="{{movie.image.url}}">-->
+<!--        <input type="file" class="form-control" name="i">-->
+<!--    </div>-->
+<!--  <div>-->
+<!--      <button class="btn btn-outline-success" type="submit">ADD</button>-->
+  </div>
+</form>
+
+{% endblock %}
